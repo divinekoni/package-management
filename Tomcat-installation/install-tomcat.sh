@@ -18,7 +18,7 @@ sudo rm -rf apache-tomcat-9.0.73.tar.gz
 sudo mv apache-tomcat-9.0.73 tomcat9
 ### assign executable permissions to the tomcat home directory
 sudo chmod 777 -R /opt/tomcat9
-sudo chown ec2-user -R /opt/tomcat9
+sudo chown divinek -R /opt/tomcat9
 ### start tomcat
 sh /opt/tomcat9/bin/startup.sh
 # create a soft link to start and stop tomcat
@@ -37,7 +37,7 @@ vim /opt/tomcat9/conf/server.xml
 vi /opt/tomcat9/webapps/manager/META-INF/context.xml
 vi /opt/tomcat9/conf/tomcat-user.xml  # to add user
 
-	<user username="landmark" password="admin" roles="manager-gui,admin-gui"/>
+	<user username="divinek" password="password" roles="manager-gui,admin-gui"/>
 	
 
 /opt/tomcat9/conf/context.xml
@@ -47,6 +47,6 @@ vi /opt/tomcat9/conf/tomcat-user.xml  # to add user
   vi /opt/tomcat9/conf/tomcat-user.xml  # to add user
   
 	
-	username YourName password=PassWord   roles=manager-gui
+	username divinek password=password   roles=manager-gui
 	
 	
